@@ -1,4 +1,4 @@
-# 🌟 Light
+# 🌟 Light- by Optimal log.
 
 **Light** es una landing page sencilla y optimizada que te ayuda a **reducir el tamaño de tus imágenes** para que tu sitio web cargue más rápido.  
 Está pensada para cualquier tipo de proyecto, desde blogs y portfolios hasta tiendas **eCommerce**.
