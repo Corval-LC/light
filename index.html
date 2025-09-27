@@ -19,17 +19,31 @@
   <section class="hero">
     <div class="container text-center">
       <span class="tag">✨ Gratis y sin límites</span>
-      <h2 class="hero-title">Convierte tus imágenes a WebP</h2>
-      <p class="hero-subtitle">
-        Reduce el tamaño de tus imágenes hasta un 35% sin perder calidad. 
-        Perfecto para optimizar tu sitio web y mejorar la velocidad de carga.
-      </p>
 
-      <div class="dropzone">Arrastra tus imágenes aquí o haz clic para seleccionarlas</div>
-
-      <button class="btn primary">⬇ Convertir a WebP</button>
-      <p class="info">0 imágenes seleccionadas</p>
+      <div id="converterDiv">
+        <h2 class="hero-title">Convierte tus imágenes a WebP</h2>
+        <p class="hero-subtitle">
+          Reduce el tamaño de tus imágenes hasta un 35% sin perder calidad. 
+          Perfecto para optimizar tu sitio web y mejorar la velocidad de carga.
+        </p>
+  
+        <div class="dropzone" id="dropzone">Arrastra hasta 3 imágenes o haz clic para seleccionarlas</div>
+  
+        <button class="btn primary" id="convertBtn" type="button">⬇ Convertir a WebP</button>
+        <p class="info"><span id="image-count">0</span> de 3 imágenes seleccionadas</p>
     </div>
+
+    <div id="progressContainer" class="hidden">
+      <div id="progressBar"></div>
+    </div>
+
+     <div id="previewContainer" class="preview-container"></div>
+        
+        <a id="downloadLink" class="btn outline" style="display:none;">Descargar</a>
+        <input type="file" id="fileInput" accept="image/*" style="display:none">
+    </div>
+
+    <button id="convertMoreBtn" class="btn primary hidden">Convertir más imágenes</button>
   </section>
 
   <!-- Ventajas WebP -->
@@ -66,5 +80,7 @@
       <p>© 2024 Light x Optimal log. Hecho con ❤️ para la comunidad.</p>
     </div>
   </footer>
+
+  <script type="module" src="js/app.js"></script>
 </body>
 </html>
