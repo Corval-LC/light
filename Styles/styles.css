@@ -2,8 +2,8 @@
    Variables
 ============================== */
 :root {
-  --primary-color: #0284c7;
-  --primary-color-dark: #0369a1;
+  --primary-color: #0b0b0b;
+  --primary-color-dark: #343738;
   --secondary-color: #e0f2fe;
   --text-color: #333;
   --text-subtitle: #444;
@@ -80,9 +80,10 @@ body {
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 1.4rem 0;
 }
+
 
 .hero-subtitle {
   font-size: 1.6rem;
@@ -156,11 +157,11 @@ body {
    Buttons
 ============================== */
 .btn {
-  padding: 0.8rem 1.5rem;
+  padding: 1.8rem 1.5rem;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
-  font-size: 1.6rem;
+  font-size: 1.9rem;
   transition: filter var(--transition-medium), transform var(--transition-fast);
 }
 
@@ -210,18 +211,49 @@ body {
 /* ==============================
    Sections
 ============================== */
-.advantages, .donation {
-  padding: 3rem 1rem;
+
+.advantages {
+  padding: 40px 20px;
+  background-color: #f9f9f9; /* fondo suave */
+  text-align: center;
+
 }
 
-.advantages ul {
-  list-style: none;
-  margin-top: 1rem;
+.advantages h3 {
+  margin-bottom: 30px;
+  font-size: 2.1rem;
+  color: #1c1313;
 }
 
-.advantages li {
-  margin: 0.5rem 0;
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
 }
+
+.card {
+  background: rgb(255, 255, 255);
+  border: 1px dashed #030303;
+  border-radius: 12px;
+  padding: 50px;
+  font-size: 1.8rem;
+  color: #444;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease;
+  display: flex;
+  align-items: center;   /* centra vertical */
+  justify-content: center; /* centra horizontal */
+  text-align: center; /* centra texto cuando es multilinea */
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+  background: #000;   /* fondo negro */
+  color: #fff;        /* texto blanco */
+  
+}
+
 
 .donation .icon {
   font-size: 2rem;
@@ -232,13 +264,28 @@ body {
   font-size: 1.2rem;
   color: var(--text-muted);
   margin-top: 0.5rem;
+
+}
+.donation h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+} 
+.donation p {
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 20px;
 }
 
+.donation .buttons {
+  padding-bottom: 25px;
+}
 /* ==============================
    Footer
 ============================== */
 .footer {
-  border-top: 0.1rem solid var(--border-color);
+  border-top: 0.2rem solid var(--border-color);
+  border-bottom: 0.5rem;
   padding: 1.5rem 0;
   font-size: 1.4rem;
   color: var(--text-muted);
@@ -288,4 +335,55 @@ body {
 .preview-item.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+.donaciones {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.donaciones h2 {
+  font-size: 3.4rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.donaciones .intro {
+  font-size: 2.2rem;
+  color: #030303;
+  margin-bottom: 40px;
+}
+
+.cards-donaciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card-donacion {
+  background: #fff;
+  border: 1px dashed #030303;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #444;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease, border 0.3s ease;
+  text-decoration: none; /* quita subrayado de <a> */
+}
+
+.card-donacion:hover {
+  transform: translateY(-5px);
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+.icono-donacion {
+  width: 110px;   /* ajustá el tamaño a gusto */
+  height: auto;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
