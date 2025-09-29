@@ -274,11 +274,15 @@ body {
   margin-top: 6px;
   margin-bottom: 20px;
 }
+
+.donation .buttons {
+  padding-bottom: 25px;
+}
 /* ==============================
    Footer
 ============================== */
 .footer {
-  border-top: 0.4rem solid var(--border-color);
+  border-top: 0.2rem solid var(--border-color);
   border-bottom: 0.5rem;
   padding: 1.5rem 0;
   font-size: 1.4rem;
