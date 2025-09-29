@@ -2,8 +2,8 @@
    Variables
 ============================== */
 :root {
-  --primary-color: #0284c7;
-  --primary-color-dark: #0369a1;
+  --primary-color: #0b0b0b;
+  --primary-color-dark: #343738;
   --secondary-color: #e0f2fe;
   --text-color: #333;
   --text-subtitle: #444;
@@ -215,6 +215,7 @@ body {
   padding: 40px 20px;
   background-color: #f9f9f9; /* fondo suave */
   text-align: center;
+
 }
 
 .advantages h3 {
@@ -231,7 +232,7 @@ body {
 
 .card {
   background: rgb(255, 255, 255);
-  border: 1px solid #ddd;
+  border: 1px dashed #030303;
   border-radius: 12px;
   padding: 50px;
   font-size: 1.8rem;
@@ -243,6 +244,8 @@ body {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+  background: #ffffff;
+  
 }
 
 
@@ -255,13 +258,24 @@ body {
   font-size: 1.2rem;
   color: var(--text-muted);
   margin-top: 0.5rem;
-}
 
+}
+.donation h3 {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 20px;
+} 
+.donation p {
+  text-align: center;
+  margin-top: 6px;
+  margin-bottom: 20px;
+}
 /* ==============================
    Footer
 ============================== */
 .footer {
-  border-top: 0.1rem solid var(--border-color);
+  border-top: 0.4rem solid var(--border-color);
+  border-bottom: 0.5rem;
   padding: 1.5rem 0;
   font-size: 1.4rem;
   color: var(--text-muted);
