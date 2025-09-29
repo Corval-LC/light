@@ -80,9 +80,10 @@ body {
 }
 
 .hero-title {
-  font-size: 3rem;
+  font-size: 4rem;
   margin: 1.4rem 0;
 }
+
 
 .hero-subtitle {
   font-size: 1.6rem;
@@ -248,7 +249,8 @@ body {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 12px rgba(0,0,0,0.15);
-  background: #ffffff;
+  background: #000;   /* fondo negro */
+  color: #fff;        /* texto blanco */
   
 }
 
