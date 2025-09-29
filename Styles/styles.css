@@ -336,3 +336,54 @@ body {
   opacity: 1;
   transform: translateY(0);
 }
+
+.donaciones {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.donaciones h2 {
+  font-size: 3.4rem;
+  margin-bottom: 10px;
+  color: #222;
+}
+
+.donaciones .intro {
+  font-size: 2.2rem;
+  color: #030303;
+  margin-bottom: 40px;
+}
+
+.cards-donaciones {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card-donacion {
+  background: #fff;
+  border: 1px dashed #030303;
+  border-radius: 12px;
+  padding: 40px 20px;
+  text-align: center;
+  color: #444;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.2s ease, background 0.3s ease, color 0.3s ease, border 0.3s ease;
+  text-decoration: none; /* quita subrayado de <a> */
+}
+
+.card-donacion:hover {
+  transform: translateY(-5px);
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+.icono-donacion {
+  width: 110px;   /* ajustá el tamaño a gusto */
+  height: auto;
+  margin-bottom: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
