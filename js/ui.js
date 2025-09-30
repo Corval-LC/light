@@ -9,16 +9,16 @@ export const UI = (() => {
     };
 
     const createPreviewItem = (src, name, index) => {
-    const div = document.createElement("div");
-    div.classList.add("preview-item");
-    div.innerHTML = `
-        <img src="${src}" alt="preview-${index}">
-        <span class="preview-name">${name}</span>
-    `;
-    previewContainer.appendChild(div);
+        const div = document.createElement("div");
+        div.classList.add("preview-item");
+        div.innerHTML = `
+            <img src="${src}" alt="preview-${index}">
+            <span class="preview-name">${name}</span>
+        `;
+        previewContainer.appendChild(div);
 
-    // Animación fade-in
-    setTimeout(() => div.classList.add("visible"), 100);
+        // Animación fade-in
+        setTimeout(() => div.classList.add("visible"), 100);
     };
 
     const createDownloadLink = (blobUrl, name, index) => {
@@ -43,6 +43,16 @@ export const UI = (() => {
         updateImageCount(0);
     };
 
+    const addPaddingIfImage = (imageCount) => {
+        if( imageCount > 0 && !previewContainer.classList.contains('padding-preview')){
+            previewContainer.classList.add('padding-preview');
+            return
+        }
+        if( imageCount == 0 && previewContainer.classList.contains('padding-preview')){
+            previewContainer.classList.remove('padding-preview');
+        }
+    }
+
     // === SPINNER ===
     const insertSpinner = () => {
         previewContainer.innerHTML = '<div class="spinner" id="spinner"></div>';
@@ -66,6 +76,7 @@ export const UI = (() => {
         showConvertMoreBtn,
         hideConvertMoreBtn,
         clearPreview,
+        addPaddingIfImage,
         insertSpinner,
         showSpinner,
         hideSpinner

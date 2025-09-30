@@ -9,6 +9,7 @@ export const Converter = (() => {
     if (files.length + selectedFiles.length > MAX_IMAGES) {
       alert(`Solo puedes seleccionar hasta ${MAX_IMAGES} imágenes.`);
       UI.updateImageCount(files.length);
+      UI.addPaddingIfImage(files.length);
       return;
     }
 
@@ -20,6 +21,7 @@ export const Converter = (() => {
     generatePreviews(files);
 
     UI.updateImageCount(files.length);
+    UI.addPaddingIfImage(files.length);
   };
 
   const convertImages = async() => {
@@ -69,6 +71,7 @@ export const Converter = (() => {
     UI.clearPreview();
     UI.toggleConverter();
     UI.hideConvertMoreBtn();
+    UI.addPaddingIfImage(0);
   };
 
   const generatePreviews = (fileArray) => {

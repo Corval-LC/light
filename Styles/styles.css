@@ -20,6 +20,8 @@
 ============================== */
 html {
   font-size: 62.5%; /* 1rem = 10px */
+  height: 100%;            
+  margin: 0;    
 }
 
 * {
@@ -33,6 +35,15 @@ body {
   line-height: 1.6;
   font-size: 1.6rem;
   color: var(--text-color);
+  height: 100%;            
+  margin: 0;
+  display: flex;
+  flex-direction: column;   /* Columna: header → main → footer */
+  min-height: 100vh;   
+}
+
+main {
+  flex: 1;
 }
 
 .container {
@@ -65,7 +76,7 @@ body {
    Hero
 ============================== */
 .hero {
-  padding: 6rem 1rem 0;
+  padding: 6rem 1rem 4rem;
   text-align: center;
 }
 
@@ -114,7 +125,6 @@ body {
    Preview
 ============================== */
 .preview-container {
-  margin: 6.5rem 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -305,6 +315,7 @@ body {
    Helpers 
 ============================== */
 .hidden { display: none; }
+.padding-preview{ padding: 6.5rem 0; }
 
 /* ==============================
    Spinner
@@ -387,3 +398,4 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+
