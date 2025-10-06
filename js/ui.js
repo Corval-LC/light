@@ -25,7 +25,7 @@ export const UI = (() => {
         const link = document.createElement("a");
         link.href = blobUrl;
         link.download = name.replace(/\.[^.]+$/, "") + ".webp";
-        link.textContent = "Descargar";
+        link.textContent = "Descargar ⬇";
         link.className = "btn outline downloadBtn";
         link.style.display = "block";
         previewContainer.querySelectorAll(".preview-item")[index].appendChild(link);
